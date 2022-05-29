@@ -15,7 +15,7 @@ public class OrderDTO {
 //	}
 //
 //	private String getDetails(OrderLine orderLine) {
-//		return orderLine.getQuantity() + " X " + orderLine.getItem().getProduct().getDescription() + " (" + orderLine.getItem().getSpecification() + ")";
+//		return orderLine.getQuantity() + " X " + orderLine.getItem().getProduct().getName() + " (" + orderLine.getItem().getSpecification() + ")";
 //	}
 
 	public String getFullname() {
