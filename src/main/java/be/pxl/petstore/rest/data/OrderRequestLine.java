@@ -11,4 +11,12 @@ public class OrderRequestLine {
 	public String getItemid() {
 		return itemid;
 	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 }

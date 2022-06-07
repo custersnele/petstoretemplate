@@ -1,14 +1,22 @@
 # Java Petstore API
 
-## Get list of pets
+## 1. H2 database
 
-### Request
+http://localhost:8080/h2-console
+
+database url and credentials can be found in `appplication.properties`.
+
+## 2. API documentation
+
+### Get list of pets
+
+#### Request
 
 `GET /petstore/items/`
 
     e.g. http://localhost:8080/petstore/items
 
-### Response
+#### Response
 
     200 OK
     Content-Type: application/json
@@ -70,9 +78,9 @@
         }
     ]
 
-## Create an order
+### Create an order
 
-### Request
+#### Request
 
 `POST /petstore/orders`
 
@@ -92,6 +100,6 @@
         ]
     }
 
-### Response
+#### Response
 
     201 Created
