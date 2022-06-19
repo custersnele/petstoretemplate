@@ -2,7 +2,7 @@
 
 ## 1. H2 database
 
-http://localhost:8080/h2-console
+http://localhost:8083/h2-console
 
 database url and credentials can be found in `appplication.properties`.
 
@@ -14,7 +14,7 @@ database url and credentials can be found in `appplication.properties`.
 
 `GET /petstore/items/`
 
-    e.g. http://localhost:8080/petstore/items
+    e.g. http://localhost:8083/petstore/items
 
 #### Response
 
