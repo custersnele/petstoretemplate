@@ -2,10 +2,10 @@ package be.pxl.petstore.rest;
 
 import be.pxl.petstore.service.OrderService;
 
-public class OrdersController {
+public class OrderController {
 	private final OrderService orderService;
 
-	public OrdersController(OrderService orderService) {
+	public OrderController(OrderService orderService) {
 		this.orderService = orderService;
 	}
 

@@ -16,10 +16,8 @@ public class ItemRepositoryTest {
 
 	@PersistenceContext
 	protected EntityManager entityManager;
-
 	@Autowired
 	private ItemRepository itemRepository;
-
 	@Autowired
 	private ProductRepository productRepository;
 
