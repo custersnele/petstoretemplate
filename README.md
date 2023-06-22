@@ -2,19 +2,19 @@
 
 ## 1. H2 database
 
-http://localhost:8083/h2-console
+http://localhost:8080/petstore/h2-console
 
 database url and credentials can be found in `appplication.properties`.
 
 ## 2. API documentation
 
-### Get list of pets
+### Get list of all pets
 
 #### Request
 
 `GET /petstore/items/`
 
-    e.g. http://localhost:8083/petstore/items
+    e.g. http://localhost:8080/petstore/items
 
 #### Response
 
@@ -78,13 +78,60 @@ database url and credentials can be found in `appplication.properties`.
         }
     ]
 
+### Get list of all pets by product category
+
+#### Request
+
+`GET /petstore/items/findByCategory?category={category}`
+
+    e.g. http://localhost:8080/petstore/items/findByCategory?category=FISH
+
+#### Response
+
+    200 OK
+    Content-Type: application/json
+
+    [
+        {
+            "itemid": "EST-1",
+            "productid": "FI-SW-01",
+            "category": "FISH",
+            "productName": "Angelfish",
+            "productDescription": "Salt Water fish from Australia",
+            "price": 16.5,
+            "specification": "Large"
+        },
+        {
+            "itemid": "EST-2",
+            "productid": "FI-SW-01",
+            "category": "FISH",
+            "productName": "Angelfish",
+            "productDescription": "Salt Water fish from Australia",
+            "price": 15.5,
+            "specification": "Small"
+        }
+    ]
+
+### Update item quantity
+
+#### Request
+
+`PUT /petstore/items/{itemId}/{quantity}`
+
+    e.g. http://localhost:8080/petstore/items/EST-1/8
+
+#### Response
+
+    202 ACCEPTED
+
+
 ### Create an order
 
 #### Request
 
 `POST /petstore/orders`
 
-   
+
     {
         "name": "Nele Custers",
         "email": "nele.custers@pxl.be",
@@ -103,3 +150,7 @@ database url and credentials can be found in `appplication.properties`.
 #### Response
 
     201 Created
+
+
+## 3. Expected script output (petstore.sh)
+

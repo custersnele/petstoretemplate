@@ -1,7 +1,15 @@
 package be.pxl.petstore.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+
+@Entity
 public class Product {
+	@Id
 	private String id;
+	@Enumerated(value = EnumType.STRING)
 	private Category category;
 	private String name;
 	private String description;

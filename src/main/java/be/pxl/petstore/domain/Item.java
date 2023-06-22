@@ -1,20 +1,21 @@
 package be.pxl.petstore.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
 public class Item {
+	@Id
 	private String id;
+	@ManyToOne
 	private Product product;
 	private double price;
 	private String specification;
+	private int quantity;
 
 	public Item() {
 		// JPA only
-	}
-
-	public Item(String id, Product product, double price, String specification) {
-		this.id = id;
-		this.product = product;
-		this.price = price;
-		this.specification = specification;
 	}
 
 	public String getId() {
@@ -47,5 +48,17 @@ public class Item {
 
 	public void setSpecification(String specification) {
 		this.specification = specification;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void sell(int numberOfItems) {
+		this.quantity -= numberOfItems;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 }

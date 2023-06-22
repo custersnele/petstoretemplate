@@ -11,6 +11,7 @@ public class ItemDTO {
 	private final String productDescription;
 	private final double price;
 	private final String specification;
+	private final int quantity;
 
 	public ItemDTO(Item item) {
 		this.itemid = item.getId();
@@ -20,6 +21,7 @@ public class ItemDTO {
 		this.productName = item.getProduct().getName();
 		this.productDescription = item.getProduct().getDescription();
 		this.specification = item.getSpecification();
+		this.quantity = item.getQuantity();
 	}
 
 	public String getItemid() {
@@ -48,5 +50,9 @@ public class ItemDTO {
 
 	public String getSpecification() {
 		return specification;
+	}
+
+	public int getQuantity() {
+		return quantity;
 	}
 }

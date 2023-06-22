@@ -7,10 +7,12 @@ public final class ItemBuilder {
 	public static final String ITEM_ID = "ITEM-1";
 	public static final double ITEM_PRICE = 120.5;
 	public static final String ITEM_SPECIFICATION = "Female puppy";
+	public static final int ITEM_QUANTITY = 3;
 	private String id = ITEM_ID;
 	private Product product = ProductBuilder.aProduct().build();
 	private double price = ITEM_PRICE;
 	private String specification = ITEM_SPECIFICATION;
+	private int quantity = ITEM_QUANTITY;
 
 	private ItemBuilder() {}
 
@@ -36,12 +38,19 @@ public final class ItemBuilder {
 		return this;
 	}
 
+	public ItemBuilder withQuantity(int quantity) {
+		this.quantity = quantity;
+		return this;
+	}
+
+
 	public Item build() {
 		Item item = new Item();
 		item.setId(id);
 		item.setProduct(product);
 		item.setPrice(price);
 		item.setSpecification(specification);
+		item.setQuantity(quantity);
 		return item;
 	}
 }

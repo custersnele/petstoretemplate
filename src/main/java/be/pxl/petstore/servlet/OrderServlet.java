@@ -1,10 +1,18 @@
 package be.pxl.petstore.servlet;
 
 import be.pxl.petstore.rest.data.OrderDTO;
+import be.pxl.petstore.service.OrderService;
 
 import java.io.PrintWriter;
 
 public class OrderServlet {
+
+	private final OrderService orderService;
+
+	public OrderServlet(OrderService orderService) {
+		this.orderService = orderService;
+	}
+
 
 	private void writerOrderDTO(PrintWriter writer, OrderDTO order) {
 		writer.println("<hr/>");
@@ -25,9 +33,9 @@ public class OrderServlet {
 		writer.println("<html><head><title>Orders</title></head><body>");
 	}
 
-
 	private void writeFooter(PrintWriter writer) {
 		writer.println("</body></html>");
 	}
+
 
 }
